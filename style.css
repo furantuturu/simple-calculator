@@ -1,0 +1,108 @@
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: "Spartan", sans-serif;
+  transition: 0.2s;
+}
+
+body.theme {
+  background-color: #3a4764;
+  color: white;
+}
+
+body.theme button {
+  color: #444b5a;
+}
+
+body.theme .calc-container .calc-body .calc-heading {
+  background-color: #232c43;
+}
+
+body.theme .calc-container .calc-body .calc-output {
+  background-color: #182034;
+}
+
+body.theme .calc-container .calc-body .calc-keys {
+  background-color: #232c43;
+}
+
+body.theme .calc-container .calc-body .calc-keys button {
+  background-color: #eae3dc;
+  box-shadow: 0px 4px 0 0 #b4a597;
+}
+
+body.theme .calc-container .calc-body .calc-keys [data-reset],
+body.theme .calc-container .calc-body .calc-keys [data-delete],
+body.theme .calc-container .calc-body .calc-keys [data-equals] {
+  color: white;
+}
+
+body.theme .calc-container .calc-body .calc-keys [data-reset],
+body.theme .calc-container .calc-body .calc-keys [data-delete] {
+  background-color: #637097;
+  box-shadow: 0px 4px 0 0 #404e72;
+}
+
+body.theme .calc-container .calc-body .calc-keys [data-equals] {
+  background-color: #d03f2f;
+  box-shadow: 0px 4px 0 0 #93261a;
+}
+
+button {
+  font-size: 1.8rem;
+}
+
+[data-reset],
+[data-delete] {
+  font-size: 1rem;
+}
+
+.calc-output,
+.calc-keys {
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+}
+
+.calc-container {
+  margin-inline: 1.5rem;
+  max-width: 527px;
+  position: relative;
+}
+
+.calc-container .calc-body .calc-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline-end: 1rem;
+  margin-block-end: 1rem;
+  vertical-align: bottom;
+}
+
+.calc-container .calc-body .calc-output {
+  margin-block: 1.5rem;
+  text-align: end;
+}
+
+.calc-container .calc-body .calc-keys {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 100px));
+  gap: 0.9rem;
+}
+
+.calc-container .calc-body .calc-keys button {
+  border-radius: 0.4rem;
+  padding-block: 0.3rem;
+}
+
+.calc-container .calc-body .calc-keys .span-two {
+  grid-column: span 2;
+}
+
+.calc-container::after {
+  content: '';
+  position: absolute;
+
+}
