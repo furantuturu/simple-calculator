@@ -1,10 +1,10 @@
 body {
   height: 100vh;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   font-family: "Spartan", sans-serif;
   transition: 0.2s;
+  overflow-x: hidden;
 }
 
 body.theme {
@@ -67,8 +67,9 @@ button {
 
 .calc-container {
   margin-inline: 1.5rem;
-  max-width: 527px;
-  position: relative;
+  max-width: 627px;
+  display: flex;
+
 }
 
 .calc-container .calc-body .calc-heading {
@@ -101,8 +102,24 @@ button {
   grid-column: span 2;
 }
 
-.calc-container::after {
-  content: '';
-  position: absolute;
+.calc-history {
+  margin: 1.5rem 0 0 1.5rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  width: 300px;
+  min-width: 100px;
+  background-color: #182034;
+  text-align: end;
+}
 
+.calc-history .prev-calculation {
+  margin-bottom: 1.3rem;
+}
+
+.calc-history .prev-calculation .expression {
+  color: #eee;
+}
+
+.calc-history .prev-calculation .result {
+  margin-top: .7rem;
 }
