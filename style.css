@@ -4,7 +4,7 @@ body {
   place-items: center;
   font-family: "Spartan", sans-serif;
   transition: 0.2s;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body.theme {
@@ -108,8 +108,11 @@ button {
   border-radius: 0.7rem;
   width: 300px;
   min-width: 100px;
+  max-height: 400px;
   background-color: #182034;
   text-align: end;
+  overflow-y: auto;
+  overflow-wrap: break-word;
 }
 
 .calc-history .prev-calculation {
@@ -117,7 +120,7 @@ button {
 }
 
 .calc-history .prev-calculation .expression {
-  color: #eee;
+  color: #aaa;
 }
 
 .calc-history .prev-calculation .result {
